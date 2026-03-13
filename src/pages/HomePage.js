@@ -213,16 +213,16 @@ const HomePage = () => {
         
         <motion.div 
           style={{ y: heroY, opacity: heroOpacity }}
-          className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
-        >
+className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16 sm:pb-20"        >
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
             {/* Left Side - Text Content */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
 
-              {/* Logo */}
+
+{/* Logo */}
               <motion.div
-                className="flex justify-center lg:justify-start mt-10 mb-4 w-full"
+                className="flex justify-center lg:justify-start mt-3 sm:mt-5 w-full"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -231,16 +231,71 @@ const HomePage = () => {
                   src="/LOGO.png"
                   alt="Wynora"
                   style={{
-                    height: '70px',
+                    height: '56px',
                     width: 'auto',
                     filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.4))',
                   }}
                 />
               </motion.div>
 
+                   {/* Tagline
+             <motion.div
+  className="flex justify-center lg:justify-start mb-6 w-full"
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.65 }}
+>
+  <div
+    style={{
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '10px',
+      background: 'rgba(212, 175, 55, 0.08)',
+      border: '1px solid rgba(212, 175, 55, 0.25)',
+      borderRadius: '9999px',
+      padding: '10px 18px',
+      maxWidth: '100%',
+    }}
+  >
+    <span
+      style={{
+        width: '8px',
+        height: '8px',
+        minWidth: '8px',
+        borderRadius: '50%',
+        background: '#D4AF37',
+        boxShadow: '0 0 6px rgba(212,175,55,0.6)',
+        display: 'inline-block',
+        flexShrink: 0,
+      }}
+    />
+    <p style={{
+      margin: 0,
+      fontSize: 'clamp(13px, 1.5vw, 28px)',
+      color: 'rgba(200, 208, 220, 0.85)',
+      letterSpacing: '0.01em',
+      fontWeight: 700,
+      lineHeight: 1.4,
+    }}>
+      Empowering{' '}
+      <span style={{
+        background: 'linear-gradient(135deg, #E3B82A, #D4AF37)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        fontWeight: 800,
+      }}>
+        100 million families
+      </span>
+      {' '}globally to protect & preserve their financial assets.
+    </p>
+  </div>
+</motion.div> */}
+
+              
               {/* Main Heading */}
               <motion.h1
-                className="font-heading text-4xl sm:text-4xl md:text-5xl font-bold mb-6 leading-[1.1] w-full"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-5 sm:mb-6 leading-[1.1] w-full"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -267,7 +322,7 @@ const HomePage = () => {
 
               {/* Subheadline */}
               <motion.p
-                className="text-base md:text-xl text-[#C8D0DC]/70 mb-10 leading-relaxed max-w-xl"
+                className="text-sm sm:text-base md:text-xl text-[#C8D0DC]/70 mb-8 sm:mb-10 leading-relaxed max-w-xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
@@ -275,9 +330,12 @@ const HomePage = () => {
                 The ultimate end-to-end encrypted vault for your vital financial, legal, and digital assets. Keep everything organized today, and ensure your trusted loved ones have access when they need it most.
               </motion.p>
 
+         
+
+
               {/* CTA Buttons */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center w-full"
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-stretch sm:items-center w-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -310,108 +368,108 @@ const HomePage = () => {
                 </Link>
               </motion.div>
 
-              {/* Tagline */}
-              <motion.div
-                className="flex justify-center lg:justify-start mt-6 w-full"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.65 }}
-              >
-                <div
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    background: 'rgba(212, 175, 55, 0.08)',
-                    border: '1px solid rgba(212, 175, 55, 0.25)',
-                    borderRadius: '9999px',
-                    padding: '10px 18px',
-                    maxWidth: '100%',
-                  }}
-                >
-                  <span
-                    style={{
-                      width: '7px',
-                      height: '7px',
-                      minWidth: '7px',
-                      borderRadius: '50%',
-                      background: '#D4AF37',
-                      boxShadow: '0 0 6px rgba(212,175,55,0.6)',
-                      display: 'inline-block',
-                    }}
-                  />
-                  <p style={{ margin: 0, fontSize: '12px', color: 'rgba(200, 208, 220, 0.75)', letterSpacing: '0.01em', fontWeight: 600, lineHeight: 1.4 }}>
-                    Empowering{' '}
-                    <span style={{
-                      background: 'linear-gradient(135deg, #E3B82A, #D4AF37)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      fontWeight: 700,
-                    }}>
-                      100 million families
-                    </span>
-                    {' '}globally to protect & preserve their financial assets.
-                  </p>
-                </div>
-              </motion.div>
+              
 
             </div>
 
             {/* Right Side - Two Animated Images */}
             <motion.div
-              className="relative flex items-center justify-center mt-8 lg:mt-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-[#D4AF37]/15 to-[#22304F]/30 blur-3xl" />
-              </div>
+  className="relative flex flex-col items-center justify-center mt-8 lg:mt-0 w-full"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+>
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-[#D4AF37]/15 to-[#22304F]/30 blur-3xl" />
+  </div>
 
-              <div className="relative z-10 w-full max-w-[390px] sm:max-w-[420px] lg:max-w-[520px] h-[560px] sm:h-[320px] lg:h-[420px] flex items-end justify-center overflow-visible">
-                <motion.img
-                  src={HERO_IMG_1}
-                  alt="Hero Left"
-                  className="absolute left-[2px] bottom-0 w-[190px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
-                  initial={{ opacity: 0, x: -100 }}
-                  animate={{ opacity: 1, x: 0, y: [0, -12, 0] }}
-                  transition={{
-                    opacity: { duration: 0.6, delay: 0.4 },
-                    x: { duration: 0.8, delay: 0.4, ease: "easeOut" },
-                    y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-                  }}
-                />
-                <motion.img
-                  src={HERO_IMG_2}
-                  alt="Hero Right"
-                  className="absolute right-[2px] bottom-0 w-[190px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0, y: [0, -15, 0] }}
-                  transition={{
-                    opacity: { duration: 0.6, delay: 0.5 },
-                    x: { duration: 0.8, delay: 0.5, ease: "easeOut" },
-                    y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
-                  }}
-                />
-              </div>
+  <div className="relative z-10 w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[520px] h-[420px] sm:h-[380px] lg:h-[500px] flex items-end justify-center overflow-visible">
+    <motion.img
+      src={HERO_IMG_1}
+      alt="Hero Left"
+      className="absolute left-[4px] bottom-0 w-[170px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0, y: [0, -12, 0] }}
+      transition={{
+        opacity: { duration: 0.6, delay: 0.4 },
+        x: { duration: 0.8, delay: 0.4, ease: "easeOut" },
+        y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+      }}
+    />
+    <motion.img
+      src={HERO_IMG_2}
+      alt="Hero Right"
+      className="absolute right-[4px] bottom-0 w-[170px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0, y: [0, -15, 0] }}
+      transition={{
+        opacity: { duration: 0.6, delay: 0.5 },
+        x: { duration: 0.8, delay: 0.5, ease: "easeOut" },
+        y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
+      }}
+    />
+  </div>
 
-              <motion.div
-                className="absolute text-[#D4AF37] opacity-[0.06]"
-                style={{ width: 300, height: 360 }}
-                animate={{ rotate: [0, 2, 0, -2, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <WShieldWatermark className="w-full h-full" />
-              </motion.div>
-            </motion.div>
+  {/* Tagline - images ke paon ke neeche */}
+  <motion.div
+    className="relative z-10 w-full flex justify-center px-2 sm:px-4 mt-4"
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.65 }}
+  >
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'flex-start',
+        gap: '10px',
+        background: 'rgba(212, 175, 55, 0.08)',
+        border: '1px solid rgba(212, 175, 55, 0.25)',
+        borderRadius: '24px',
+        padding: '12px 14px',
+        maxWidth: '100%',
+      }}
+    >
+      <p style={{
+        margin: 0,
+        fontSize: '20px',
+        color: 'rgba(200, 208, 220, 0.85)',
+        letterSpacing: '0.01em',
+        fontWeight: 700,
+        lineHeight: 1.4,
+        textAlign: 'center',
+      }}>
+        Empowering{' '}
+        <span style={{
+          background: 'linear-gradient(135deg, #E3B82A, #D4AF37)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontWeight: 800,
+          fontSize: '20px',
+        }}>
+          100 million families
+        </span>
+        {' '}globally to protect & preserve their financial assets.
+      </p>
+    </div>
+  </motion.div>
+
+  <motion.div
+    className="absolute text-[#D4AF37] opacity-[0.06] pointer-events-none"
+    style={{ width: 260, height: 320 }}
+    animate={{ rotate: [0, 2, 0, -2, 0] }}
+    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+  >
+    <WShieldWatermark className="w-full h-full" />
+  </motion.div>
+</motion.div>
 
           </div>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden sm:block"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
@@ -430,7 +488,7 @@ const HomePage = () => {
       {/* ========================================
           PROBLEM / EMPATHY SECTION
           ======================================== */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#22304F] via-[#1D2A45] to-[#22304F]" />
         
         {/* Faded family image */}
@@ -473,7 +531,7 @@ const HomePage = () => {
               <span className="text-xs font-semibold tracking-widest text-red-300/80 uppercase">The Reality</span>
             </div>
 
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight">
               Life is Unpredictable.{' '}
               <span style={{
                 background: 'linear-gradient(135deg, #E3B82A 0%, #D4AF37 50%, #B8941F 100%)',
@@ -485,13 +543,13 @@ const HomePage = () => {
               </span>
             </h2>
 
-            <p className="text-xl md:text-2xl text-[#C8D0DC]/60 leading-relaxed mb-16 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-2xl text-[#C8D0DC]/60 leading-relaxed mb-10 sm:mb-16 max-w-3xl mx-auto">
               If something unexpected happened tomorrow, would your family know where to find your insurance policies? 
               Your property deeds? Your crypto passwords?
             </p>
 
             {/* Stat-like callout cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-16">
               {[
                 { stat: "73%", label: "of families struggle to locate critical documents after an emergency" },
                 { stat: "₹4.2L Cr", label: "in unclaimed insurance sits idle — because families didn't know it existed" },
@@ -503,9 +561,9 @@ const HomePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="rounded-2xl bg-[#1A2540]/60 backdrop-blur-xl border border-[#C8D0DC]/10 p-8"
+                  className="rounded-2xl bg-[#1A2540]/60 backdrop-blur-xl border border-[#C8D0DC]/10 p-5 sm:p-8"
                 >
-                  <p className="font-heading text-4xl font-bold mb-3" style={{
+                  <p className="font-heading text-3xl sm:text-4xl font-bold mb-3" style={{
                     background: 'linear-gradient(135deg, #E3B82A, #D4AF37)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -526,7 +584,7 @@ const HomePage = () => {
       {/* ========================================
           VALUE PROPOSITION SECTION
           ======================================== */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[#22304F]" />
         
         <div 
@@ -551,7 +609,7 @@ const HomePage = () => {
         </motion.div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
             {/* Left - Visual */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -565,7 +623,7 @@ const HomePage = () => {
                   <img 
                     src={BG_IMAGES.security}
                     alt="Secure Digital Vault"
-                    className="w-full h-80 md:h-96 object-cover opacity-70"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover opacity-70"
                     style={{ filter: 'brightness(0.7) hue-rotate(10deg)' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#22304F] via-[#22304F]/50 to-transparent" />
@@ -584,7 +642,7 @@ const HomePage = () => {
                 </div>
                 
                 <motion.div
-                  className="absolute -bottom-6 -right-6 bg-[#1A2540]/90 backdrop-blur-xl border border-[#D4AF37]/30 rounded-2xl p-5"
+                  className="absolute bottom-4 right-4 sm:-bottom-6 sm:-right-6 bg-[#1A2540]/90 backdrop-blur-xl border border-[#D4AF37]/30 rounded-2xl p-4 sm:p-5"
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -606,7 +664,7 @@ const HomePage = () => {
                 <span className="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">Why WynOra Vault</span>
               </div>
               
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 sm:mb-6 leading-tight">
                 Peace of Mind,{' '}
                 <span style={{
                   background: 'linear-gradient(135deg, #E3B82A 0%, #D4AF37 50%, #B8941F 100%)',
@@ -617,7 +675,7 @@ const HomePage = () => {
                   Elegantly Delivered
                 </span>
               </h2>
-              <p className="text-[#C8D0DC]/60 text-lg mb-10 leading-relaxed">
+              <p className="text-[#C8D0DC]/60 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed">
                 In a world of digital chaos, WynOra Vault brings order to your most important documents. 
                 From financial records to legal papers, everything finds its secure home.
               </p>
@@ -654,7 +712,7 @@ const HomePage = () => {
       {/* ========================================
           FEATURES MATRIX — Everything Under One Roof
           ======================================== */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#22304F] via-[#1A2540] to-[#22304F]" />
         
         <div 
@@ -687,14 +745,14 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-20"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/25 mb-8">
               <Key className="h-3 w-3 text-[#D4AF37]" />
               <span className="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">Complete Coverage</span>
             </div>
 
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 sm:mb-6">
               <span style={{
                 background: 'linear-gradient(135deg, #C8D0DC 0%, #F2F2F2 30%, #C8D0DC 100%)',
                 WebkitBackgroundClip: 'text',
@@ -709,7 +767,7 @@ const HomePage = () => {
                 backgroundClip: 'text',
               }}>Under One Unbreakable Roof.</span>
             </h2>
-            <p className="text-xl text-[#C8D0DC]/50 max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-[#C8D0DC]/50 max-w-2xl mx-auto">
               WynOra Vault replaces messy filing cabinets and scattered spreadsheets with a sleek, categorized digital ecosystem.
             </p>
           </motion.div>
@@ -755,7 +813,7 @@ const HomePage = () => {
       {/* ========================================
           TRUSTEE SYSTEM SECTION — Core Differentiator
           ======================================== */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#22304F] via-[#1D2A45] to-[#22304F]" />
         
         {/* Special gold spotlight */}
@@ -771,7 +829,7 @@ const HomePage = () => {
         </motion.div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
             
             {/* Left - Content */}
             <motion.div
@@ -784,7 +842,7 @@ const HomePage = () => {
                 <span className="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">Unique Feature</span>
               </div>
 
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 sm:mb-6 leading-tight">
                 Pass the Torch with{' '}
                 <span style={{
                   background: 'linear-gradient(135deg, #E3B82A 0%, #D4AF37 50%, #B8941F 100%)',
@@ -796,7 +854,7 @@ const HomePage = () => {
                 </span>
               </h2>
               
-              <p className="text-[#C8D0DC]/60 text-lg mb-10 leading-relaxed">
+              <p className="text-[#C8D0DC]/60 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed">
                 WynOra Vault isn't just about storage — it's about succession. Our unique <strong className="text-[#D4AF37]/80">Verified Trustee System</strong> allows you to assign specific access rights to family members, close friends, or legal counsel.
               </p>
 
@@ -810,7 +868,7 @@ const HomePage = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.12 }}
-                      className="flex gap-5 p-5 rounded-2xl bg-[#1A2540]/50 border border-[#D4AF37]/10 hover:border-[#D4AF37]/25 transition-all duration-300"
+                      className="flex gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl bg-[#1A2540]/50 border border-[#D4AF37]/10 hover:border-[#D4AF37]/25 transition-all duration-300"
                     >
                       <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center flex-shrink-0">
                         <Icon className="h-6 w-6 text-[#D4AF37]" strokeWidth={1.5} />
@@ -833,7 +891,7 @@ const HomePage = () => {
               className="relative"
             >
               {/* Central vault node */}
-              <div className="relative flex items-center justify-center h-[480px]">
+              <div className="relative flex items-center justify-center h-[340px] sm:h-[420px] lg:h-[480px]">
                 {/* Orbiting connection lines (SVG) */}
                 <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 400 400">
                   <circle cx="200" cy="200" r="120" stroke="#D4AF37" strokeWidth="1" strokeDasharray="4 8" fill="none" />
@@ -845,7 +903,7 @@ const HomePage = () => {
 
                 {/* Center: Your Vault */}
                 <motion.div
-                  className="relative z-10 w-28 h-28 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/40 flex flex-col items-center justify-center text-center"
+                  className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/40 flex flex-col items-center justify-center text-center"
                   animate={{
                     boxShadow: ['0 0 40px rgba(212, 175, 55, 0.2)', '0 0 70px rgba(212, 175, 55, 0.4)', '0 0 40px rgba(212, 175, 55, 0.2)']
                   }}
@@ -868,13 +926,13 @@ const HomePage = () => {
                   return (
                     <motion.div
                       key={i}
-                      className="absolute w-20 h-20 rounded-2xl bg-[#1A2540]/80 backdrop-blur-xl border border-[#C8D0DC]/20 flex flex-col items-center justify-center text-center"
-                      style={{ left: `calc(${x}% - 40px)`, top: `calc(${y}% - 40px)` }}
+                      className="absolute w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#1A2540]/80 backdrop-blur-xl border border-[#C8D0DC]/20 flex flex-col items-center justify-center text-center"
+                      style={{ left: `calc(${x}% - 32px)`, top: `calc(${y}% - 32px)` }}
                       animate={{ y: [0, -8, 0] }}
                       transition={{ duration: 4 + i, repeat: Infinity, delay: node.delay, ease: "easeInOut" }}
                     >
-                      <UserCheck className="h-6 w-6 text-[#C8D0DC]/60 mb-1" strokeWidth={1.5} />
-                      <span className="text-[#C8D0DC]/50 text-[10px] font-medium leading-tight">{node.label}</span>
+                      <UserCheck className="h-5 w-5 sm:h-6 sm:w-6 text-[#C8D0DC]/60 mb-1" strokeWidth={1.5} />
+                      <span className="text-[#C8D0DC]/50 text-[9px] sm:text-[10px] font-medium leading-tight px-1">{node.label}</span>
                     </motion.div>
                   );
                 })}
@@ -887,7 +945,7 @@ const HomePage = () => {
       {/* ========================================
           SECURITY PILLAR SECTION
           ======================================== */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#22304F] via-[#1A2540] to-[#22304F]" />
         
         <div 
@@ -922,9 +980,9 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 sm:mb-6">
               <span style={{
                 background: 'linear-gradient(135deg, #C8D0DC 0%, #F2F2F2 30%, #C8D0DC 100%)',
                 WebkitBackgroundClip: 'text',
@@ -946,7 +1004,7 @@ const HomePage = () => {
                 backgroundClip: 'text',
               }}>Prestige.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-[#C8D0DC]/60 italic font-light tracking-wide">
+            <p className="text-base sm:text-xl md:text-2xl text-[#C8D0DC]/60 italic font-light tracking-wide">
               "Where security meets sophistication."
             </p>
           </motion.div>
@@ -956,24 +1014,24 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group relative mb-12"
+            className="group relative mb-10 sm:mb-12"
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-[#D4AF37]/20 via-transparent to-[#D4AF37]/10 rounded-3xl blur-2xl" />
-            <div className="relative rounded-3xl bg-[#1A2540]/60 backdrop-blur-2xl border border-[#D4AF37]/20 p-12 overflow-hidden">
+            <div className="relative rounded-3xl bg-[#1A2540]/60 backdrop-blur-2xl border border-[#D4AF37]/20 p-5 sm:p-8 lg:p-12 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[1px]" style={{
                 background: 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent)'
               }} />
               
-              <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/25 mb-6">
                     <Lock className="h-3 w-3 text-[#D4AF37]" />
                     <span className="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">Zero-Knowledge Architecture</span>
                   </div>
-                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
+                  <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
                     Military-Grade Security for Your Most Private Data.
                   </h3>
-                  <p className="text-[#C8D0DC]/60 leading-relaxed">
+                  <p className="text-[#C8D0DC]/60 text-sm sm:text-base leading-relaxed">
                     WynOra Vault utilizes zero-knowledge, end-to-end encryption. This means your data is encrypted on your device <em>before</em> it ever reaches our servers. Even we can't see what's inside your vault. Only you and your verified trustees hold the keys.
                   </p>
                 </div>
