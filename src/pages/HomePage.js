@@ -217,82 +217,7 @@ className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
             {/* Left Side - Text Content */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-
-
-{/* Logo */}
-              <motion.div
-                className="flex justify-center lg:justify-start mt-3 sm:mt-5 w-full"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-              >
-                <img
-                  src="/LOGO.png"
-                  alt="Wynora"
-                  style={{
-                    height: '56px',
-                    width: 'auto',
-                    filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.4))',
-                  }}
-                />
-              </motion.div>
-
-                   {/* Tagline
-             <motion.div
-  className="flex justify-center lg:justify-start mb-6 w-full"
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.65 }}
->
-  <div
-    style={{
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: '10px',
-      background: 'rgba(212, 175, 55, 0.08)',
-      border: '1px solid rgba(212, 175, 55, 0.25)',
-      borderRadius: '9999px',
-      padding: '10px 18px',
-      maxWidth: '100%',
-    }}
-  >
-    <span
-      style={{
-        width: '8px',
-        height: '8px',
-        minWidth: '8px',
-        borderRadius: '50%',
-        background: '#D4AF37',
-        boxShadow: '0 0 6px rgba(212,175,55,0.6)',
-        display: 'inline-block',
-        flexShrink: 0,
-      }}
-    />
-    <p style={{
-      margin: 0,
-      fontSize: 'clamp(13px, 1.5vw, 28px)',
-      color: 'rgba(200, 208, 220, 0.85)',
-      letterSpacing: '0.01em',
-      fontWeight: 700,
-      lineHeight: 1.4,
-    }}>
-      Empowering{' '}
-      <span style={{
-        background: 'linear-gradient(135deg, #E3B82A, #D4AF37)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-        fontWeight: 800,
-      }}>
-        100 million families
-      </span>
-      {' '}globally to protect & preserve their financial assets.
-    </p>
-  </div>
-</motion.div> */}
-
-              
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">            
               {/* Main Heading */}
               <motion.h1
                 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-5 sm:mb-6 leading-[1.1] w-full"
@@ -418,24 +343,46 @@ className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:
     transition={{ delay: 0.65 }}
   >
     <div
+      className="w-full max-w-2xl"
       style={{
         display: 'flex',
-        alignItems: 'flex-start',
-        gap: '10px',
-        background: 'rgba(212, 175, 55, 0.08)',
-        border: '1px solid rgba(212, 175, 55, 0.25)',
-        borderRadius: '24px',
-        padding: '12px 14px',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '12px',
+        background: 'linear-gradient(180deg, rgba(24, 35, 59, 0.82) 0%, rgba(24, 35, 59, 0.65) 100%)',
+        border: '1px solid rgba(212, 175, 55, 0.2)',
+        borderRadius: '28px',
+        padding: '16px 18px',
         maxWidth: '100%',
+        boxShadow: '0 18px 50px rgba(8, 15, 28, 0.24), inset 0 1px 0 rgba(255,255,255,0.06)',
+        backdropFilter: 'blur(18px)',
       }}
     >
+      <span
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '6px 12px',
+          borderRadius: '9999px',
+          fontSize: '12px',
+          fontWeight: 700,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: '#F1D46A',
+          background: 'rgba(212, 175, 55, 0.12)',
+          border: '1px solid rgba(212, 175, 55, 0.24)',
+        }}
+      >
+        Our Mission
+      </span>
       <p style={{
         margin: 0,
-        fontSize: '20px',
-        color: 'rgba(200, 208, 220, 0.85)',
+        fontSize: 'clamp(18px, 4vw, 32px)',
+        color: 'rgba(235, 240, 248, 0.92)',
         letterSpacing: '0.01em',
         fontWeight: 700,
-        lineHeight: 1.4,
+        lineHeight: 1.35,
         textAlign: 'center',
       }}>
         Empowering{' '}
@@ -445,7 +392,6 @@ className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
           fontWeight: 800,
-          fontSize: '20px',
         }}>
           100 million families
         </span>
