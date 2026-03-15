@@ -312,7 +312,7 @@ className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:
     <motion.img
       src={HERO_IMG_1}
       alt="Hero Left"
-      className="absolute left-[4px] bottom-0 w-[170px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
+      className="absolute left-[40px] sm:left-[4px] bottom-0 w-[170px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0, y: [0, -12, 0] }}
       transition={{
@@ -324,7 +324,7 @@ className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:
     <motion.img
       src={HERO_IMG_2}
       alt="Hero Right"
-      className="absolute right-[4px] bottom-0 w-[170px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
+      className="absolute right-[40px] sm:right-[4px] bottom-0 w-[170px] sm:w-[175px] md:w-[220px] lg:w-[300px] xl:w-[340px] h-auto drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]"
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0, y: [0, -15, 0] }}
       transition={{
