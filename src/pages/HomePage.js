@@ -212,7 +212,7 @@ const HomePage = () => {
         <ShieldWatermarks />
         
         <motion.div 
-          style={{ y: heroY, opacity: heroOpacity }}
+          // style={{ y: heroY, opacity: heroOpacity }}
 className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16 sm:pb-20"        >
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
@@ -335,71 +335,7 @@ className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:
     />
   </div>
 
-  {/* Tagline - images ke paon ke neeche */}
-  <motion.div
-    className="relative z-10 w-full flex justify-center px-2 sm:px-4 mt-4"
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.65 }}
-  >
-    <div
-      className="w-full max-w-2xl"
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '12px',
-        background: 'linear-gradient(180deg, rgba(24, 35, 59, 0.82) 0%, rgba(24, 35, 59, 0.65) 100%)',
-        border: '1px solid rgba(212, 175, 55, 0.2)',
-        borderRadius: '28px',
-        padding: '16px 18px',
-        maxWidth: '100%',
-        boxShadow: '0 18px 50px rgba(8, 15, 28, 0.24), inset 0 1px 0 rgba(255,255,255,0.06)',
-        backdropFilter: 'blur(18px)',
-      }}
-    >
-      <span
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '6px 12px',
-          borderRadius: '9999px',
-          fontSize: '12px',
-          fontWeight: 700,
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-          color: '#F1D46A',
-          background: 'rgba(212, 175, 55, 0.12)',
-          border: '1px solid rgba(212, 175, 55, 0.24)',
-        }}
-      >
-        Our Mission
-      </span>
-      <p style={{
-        margin: 0,
-        fontSize: 'clamp(18px, 4vw, 32px)',
-        color: 'rgba(235, 240, 248, 0.92)',
-        letterSpacing: '0.01em',
-        fontWeight: 700,
-        lineHeight: 1.35,
-        textAlign: 'center',
-      }}>
-        Empowering{' '}
-        <span style={{
-          background: 'linear-gradient(135deg, #E3B82A, #D4AF37)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          fontWeight: 800,
-        }}>
-          100 million families
-        </span>
-        {' '}globally to protect & preserve their financial assets.
-      </p>
-    </div>
-  </motion.div>
-
+  
   <motion.div
     className="absolute text-[#D4AF37] opacity-[0.06] pointer-events-none"
     style={{ width: 260, height: 320 }}
@@ -465,6 +401,84 @@ className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:
         >
           <WShieldWatermark className="w-full h-full" />
         </motion.div>
+
+{/* Mission Statement - Standalone Container */}
+<motion.div
+  className="relative z-10 w-full px-4 sm:px-6 mb-7"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+>
+  {/* Outer glow */}
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <div className="w-[600px] h-[200px] rounded-full bg-[#D4AF37]/8 blur-[80px]" />
+  </div>
+
+  {/* The Container */}
+  <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden"
+    style={{
+      background: 'linear-gradient(135deg, rgba(20, 30, 52, 0.95) 0%, rgba(26, 37, 64, 0.98) 100%)',
+      border: '1px solid rgba(212, 175, 55, 0.25)',
+      boxShadow: '0 0 60px rgba(212, 175, 55, 0.08), 0 30px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(212,175,55,0.15)',
+    }}
+  >
+    {/* Top shimmer line */}
+    <div className="absolute top-0 left-0 right-0 h-[1px]"
+      style={{ background: 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent)' }}
+    />
+    {/* Bottom shimmer line */}
+    <div className="absolute bottom-0 left-0 right-0 h-[1px]"
+      style={{ background: 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent)' }}
+    />
+
+    {/* Left accent bar */}
+    <div className="absolute left-0 top-8 bottom-8 w-[2px] rounded-full"
+      style={{ background: 'linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.5), transparent)' }}
+    />
+    {/* Right accent bar */}
+    <div className="absolute right-0 top-8 bottom-8 w-[2px] rounded-full"
+      style={{ background: 'linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.5), transparent)' }}
+    />
+
+    {/* Content */}
+    <div className="relative px-8 sm:px-16 py-12 sm:py-16 text-center">
+      {/* Badge */}
+      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8"
+        style={{
+          background: 'rgba(212, 175, 55, 0.12)',
+          border: '1px solid rgba(212, 175, 55, 0.3)',
+        }}
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
+        <span className="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">Our Mission</span>
+      </div>
+
+      {/* Heading */}
+     <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1]">
+  <span className="block text-white mb-2">Empowering</span>
+  <span className="block mb-2" style={{
+    background: 'linear-gradient(135deg, #E3B82A 0%, #D4AF37 30%, #B8941F 60%, #D4AF37 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+  }}>
+    100 million families
+  </span>
+  <span className="block text-white mb-2">globally to protect</span>
+  <span className="block" style={{
+    background: 'linear-gradient(135deg, #E3B82A 0%, #D4AF37 30%, #B8941F 60%, #D4AF37 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+  }}>
+    & preserve their financial assets.
+  </span>
+</h2>
+    </div>
+  </div>
+</motion.div>
+
+
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
